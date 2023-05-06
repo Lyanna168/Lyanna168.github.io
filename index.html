@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>反诈骗小测试</title>
+    <style>
+      body {
+        background-color: skyblue;
+      }
+      h1 {
+        color: white;
+        background-color: skyblue;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+      }
+      .emoji {
+        display: inline-block;
+        transform: rotate(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>反诈骗小测试</h1>
+      <form id="quiz-form">
+        <div class="question">
+          <p style="color: yellow; font-family: Arial, sans-serif;">1. 在大街上，一位路人向你索要微信号，以下哪项是正确的做法？（）</p>
+          <label><input type="radio" name="q1" value="A">A. 马上把微信号给他/她</label><br>
+          <label><input type="radio" name="q1" value="B">B. 大骂一声骗子，然后逃跑</label><br>
+          <label><input type="radio" name="q1" value="C">C. 让他微信转你50元</label><br>
+          <label><input type="radio" name="q1" value="D">D. 核实对方的意图，再斟酌是否给出微信号</label><br>
+          <span class="emoji" style="transform: rotate(0deg);">📱</span>
+        </div>
+        <div class="question">
+          <p style="color: yellow; font-family: Arial, sans-serif;">2. 在网络上，有一个网友声称他可以带你刷单赚钱这个网友告诉你，只要你把手机号和收到的验证码发给他你就可以加入刷单团队赚钱，这个时候你应该</p>
+          <label><input type="radio" name="q2" value="A">A. 乖乖交出手机号和验证码</label><br>
+          <label><input type="radio" name="q2" value="B">B. 把前男友的手机号给他</label><br>
+          <label><input type="radio" name="q2" value="C">C. 把他删除，并向反诈骗部门举报</label><br>
+          <label><input type="radio" name="q2" value="D">D. 给他转账50元</label><br>
+          <span class="emoji" style="transform: rotate(0deg);">💰</span>
+        </div>
+        <div class="question">
+          <p style="color: yellow; font-family: Arial, sans-serif;">3. 你在求职的时候，看到一个这样的岗位岗位职责是助理，但没写清楚是怎样的助理上岗地点和时间都不清楚，岗位负责人含糊其辞，只说这个岗位薪资很高,在你犹豫时，岗位负责人一而再再而三地劝你报这个岗位，下面哪一个选项恰当？</p>
+          <label><input type="radio" name="q3" value="A">A. 马上加入该岗位</label><br>
+          <label><input type="radio" name="q3" value="B">B. 给他转账50元</label><br>
+          <label><input type="radio" name="q3" value="C">C. 马上离开</label><br>
+          <span class="emoji" style="transform: rotate(0deg);">😨</span>
+        </div>
+        <button type="submit">交卷</button>
+      </form>
+      <div style="font-size: 50px; margin-top: 50px;">
+        <span id="emoji" style="display: inline-block; transform: rotate(0deg);">🤚😊</span>
+        <script>
+          function shake() {
+            const emoji = document.getElementById('emoji');
+            const degs = [-10, 10, -8, 8, -6, 6, -4, 4, -2, 2, 0];
+            let i = 0;
+            const interval = setInterval(() => {
+              emoji.style.transform = `rotate(${degs[i]}deg)`;
+              i++;
+              if (i === degs.length) {
+                clearInterval(interval);
+                emoji.style.transform = 'rotate(0deg)';
+              }
+            }, 50);
+          }
+          setInterval(shake, 3000);
+        </script>
+        <p style="font-family: &#39;Comic Sans MS&#39;, cursive, sans-serif;">反诈骗，我们一起努力</p>
+      </div>
+    </div>
+    <script src="./反诈骗小测试_files/script.js"></script>
+    <script>
+      const quizForm = document.getElementById('quiz-form');
+      quizForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const q1 = quizForm.elements['q1'].value;
+        const q2 = quizForm.elements['q2'].value;
+        const q3 = quizForm.elements['q3'].value;
+        let score = 0;
+        if (q1 === 'D') {
+          score++;
+        }
+        if (q2 === 'C') {
+          score++;
+        }
+        if (q3 === 'C') {
+          score++;
+        }
+        if (score === 3) {
+          alert('全对，你是反诈骗小能手！');
+        } else {
+          alert('没有全对，继续加油吧');
+        }
+      });
+    </script>
