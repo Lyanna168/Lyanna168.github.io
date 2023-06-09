@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LyannaLuPersonalWebsite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Customize the cover */
+    .cover {
+      background: linear-gradient(to bottom, #87CEFA, #1E90FF);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Customize the header */
+    .header {
+      background-color: white;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Customize the buttons */
+    .btn-group-vertical {
+      margin-top: 100px;
+    }
+
+    /* Customize the paragraph */
+    .paragraph {
+      margin-top: 50px;
+      text-align: center;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* Customize the blue button */
+    .btn-blue {
+      background-color: blue;
+      color: white;
+      margin-top: 50px;
+    }
+
+    /* Customize the carousel */
+    .carousel-item {
+      height: 500px;
+    }
+
+    /* Customize the accordion */
+    .accordion-item {
+      margin-top: 20px;
+    }
+
+    .accordion-button {
+      background-color: blue;
+      color: white;
+    }
+
+    .accordion-collapse {
+      background-color: white;
+      color: black;
+    }
+
+    .rotating-emojis {
+      position:absolute;
+      top:-4em;
+      left:50%;
+      transform: translateX(-50%) rotate(0deg);
+      animation: rotate 2s linear infinite;
+      font-size: 4em;
+    }
+
+    .letter-Lyanna{
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 5em;
+      position:absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: fade 4s ease-in-out infinite, wave 1.5s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+        from {transform: translateX(-50%) rotate(0deg);}
+        to {transform: translateX(-50%) rotate(360deg);}
+    }
+
+    @keyframes fade {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes wave {
+        0% {transform: translate(-50%, -50%) rotate(0deg);}
+        50% {transform: translate(-50%, -50%) rotate(10deg);}
+        100% {transform: translate(-50%, -50%) rotate(0deg);}
+    }
+
+    /* Customize the cloud emoji */
+    .cloud-emoji {
+        position:absolute;
+        top:-4em;
+        left:-10%;
+        transform-origin:center;
+        animation-name:floating;
+        animation-duration:.8s;
+        animation-iteration-count:-1;
+        animation-timing-function:sine-wave;
+        font-size:.8em;
+        opacity:.8
+     }
+
+     @keyframes floating{
+         from{transform :translateY(0%)}
+         to{transform :translateY(-10%)}
+     }
+
+     @keyframes fade {
+         from {opacity :0;}
+         to {opacity :1;}
+     }
+
+     @keyframes wave {
+         from {transform :translate(-50%, -50%) rotate(0deg);}
+         to {transform :translate(-50%, -50%) rotate(10deg);}
+     }
+
+     @keyframes rotate {
+         from {transform :translateX(-50%) rotate(0deg);}
+         to {transform :translateX(-50%) rotate(360deg);}
+     }
+  </style>
+</head>
+<body>
+  <!-- Cover -->
+  <div class="cover">
+    <div class="letter-Lyanna">L Y A N N A</div>
+    <!-- Add a new div element with the cloud emoji -->
+    <div class="cloud-emoji">☁️</div>
+    <div class="paragraph" style="text-align:center;">
+      <p style="font-weight:bold;line-height:1.5em;">
+        Welcome to Lyanna Lu's personal website!<br>I'm Lyanna Lu, a public relations student at Communication University of China.<br>Here you can read about my recent work and work experience.<br><strong>Click the button below to learn more.</strong>
+        </p>
+          <div class="btn-blue">
+  <a href="newpage.html" style="color: white; text-decoration: none;">Learn More</a>
+</div>
+    </div>
+  </div>
+</body>
+</html>
