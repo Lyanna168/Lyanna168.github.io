@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/2012/xhtml">
+<head>
+<script language="JavaScript" >
+	function check(){
+		var username = document.getElementById("TxtUserName").value;
+		var password = document.getElementById("TxtPassword").value;
+			if(username==""){
+				alert("请输入用户名");
+				return false;
+			}
+			if(password==""){
+				alert("请输入密码");
+				return false;
+			}
+	}
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html"; charset="GBK" />
+<title>教师评价管理系统</title>
+<tr>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.gallerax-0.2.js"></script>
+<style type="text/css">
+@import "gallery.css";
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+		<div id="logo">
+			<h1><br /></h1><h1><a href="#">教师评价管理系统</a></h1>
+		
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="banner">
+	<ul>
+	    <form action=Index.html method=post onsubmit="check()">
+	   <li class=user_main_text>用户账号： </li>
+  	   <li class=user_main_input>
+	    <input class=TxtUserNameCssClass id=TxtUserName 
+      maxlength=20 name=TxtUserName />
+      </li>
+      <li>
+      	<select name="iden">
+		<option value="teacher">教师</option>
+		<option value="student">学生</option>
+		</select>
+	</li>
+</ul>
+    <ul>
+
+     <input type=hidden name=action value=login>
+      <li class=user_main_text>用户密码： </li>
+      <li class=user_main_input>
+        <input class=TxtPasswordCssClass id=TxtPassword 
+      type=password name=TxtPassword />
+      </li>
+	<LI class=user_main_r> 
+	<INPUT type=image alt=Submit src="images/user_botton.jpg" align=absMiddle value=Submit name=Submit> </INPUT> </LI> 
+    </ul>
+    <img src="images/pics01.jpg" width="1000" height="450" alt="" />
+    <UL>
+    <div class="copyrights">Collect from <a href="http://www.hoopchina.com/"  title="教师评价系统">Matthew</a></div>
+    
+	
+	<!-- end #page -->
+<div id="footer">
+  <p><font  face="宋体" size="60">本网站版权在手 如有雷同 纯属巧合</font></p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

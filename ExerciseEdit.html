@@ -1,0 +1,56 @@
+﻿<jsp:useBean id="exercise" class="model.ExerciseBean" scope="session">
+<jsp:setProperty property="*" name="exercise"/></jsp:useBean>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/2012/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>修改评价</title>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.gallerax-0.2.js"></script>
+<style type="text/css">
+@import "gallery.css";
+</style>
+</head>
+<body>
+<div id="wrapper">
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+		<li class="current_page_item"><a href="Index.html">首页</a></li>
+			<li><a href="StudentManage.html">管理员页面</a></li>
+			<li><a href="ExerciseManage.html">学生页面</a></li>
+			<li><a href="PerformanceManage.html">评价查询</a></li>
+			<li class="last"><a href="#connect">客服</a></li>
+		</ul>
+	</div>
+
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class ="pagesubmit">
+
+ <form action = "ExerciseEdit_do.jsp" method="post">
+ <table border="1">
+<tr><input type ="hidden" name ="id" value="<%=exercise.getEid()%>"></tr>
+    <tr><td>修改教师姓名:<input type="text" name = "exercise" value=""/></td></tr>
+    <tr><td>教师所教科目:<input type="text" name = "class" value=""/></td></tr>
+ <tr><td><input type="submit" value="提交修改"></td></tr>
+ </table>
+ </form>
+ </div>
+</center>
+<div id="footer">
+  <p><font  face="宋体" size="60">本网站版权在手 如有雷同 纯属巧合</font></p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
